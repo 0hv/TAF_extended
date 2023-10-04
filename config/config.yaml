@@ -1,0 +1,39 @@
+# Configuration générale
+general:
+  timeout: 30  # Timeout en secondes pour les attentes explicites
+  environment: "dev"  #alt. can be :"dev",,"pre-prod""production"
+
+# Configuration du serveur API
+api_server:
+  host: "localhost"
+  port: 8080
+  endpoint: "/api/v1/"
+
+# Configuration pour les tests web
+web:
+  browser: "chrome"  # Peut être "chrome", "firefox", "safari", etc.
+  base_url: "https://example.com"
+  headless: false
+
+# Configuration pour les tests mobiles
+mobile:
+  device_name: "emulator-5554"
+  platform_name: "Android"
+  platform_version: "9.0"
+  app_path: "resources/mobile_apps/my_app.apk"
+
+# Configuration pour la base de données
+database:
+  type: "sqlite"
+  path: "api_server/database/users.db"
+
+# Configuration pour le logging
+logging:
+  level: "INFO"  # Peut être "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+  log_path: "logs/"
+  log_format: "%(asctime)s - %(levelname)s - %(message)s"
+
+# Autres configurations spécifiques à ton framework
+framework:
+  self_healing: true
+  beautify_reports: true
